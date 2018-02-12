@@ -22,9 +22,9 @@ wallet=$1
  
 if [ "$1" = ""  ]
 then
-echo "$branco ---===--------------------------------------======--- \033[0m " 
-echo "$branco ---=== MINERADOR NICEHASH - CPU CryptoNight ======--- \033[0m "  
-echo "$branco ---===--------------------------------------======--- \033[0m " 
+echo "$branco ************************************************************************** \033[0m " 
+echo "$branco ####### Minerador NiceHash - CPU CryptoNight  ####### \033[0m "  
+echo "$branco ************************************************************************** \033[0m " 
 echo ""          
 sleep 1
 echo "$amarelo Forma de USO: \033[0m"
@@ -36,34 +36,36 @@ echo ""
 exit 0
 fi
  
-echo "$vermelhoClaro ---======-------------------------======--- \033[0m " 
-echo "$vermelhoClaro ---====== GRUPO BTC NIFERBITCOINS ======--- \033[0m "
-echo "$vermelhoClaro ---======-------------------------======--- \033[0m "
+echo "$vermelhoClaro *************************************************************************\033[0m " 
+echo "$vermelhoClaro #############  Criador do script Ocitsamul  ######### \033[0m "
+echo "$vermelhoClaro *************************************************************************\033[0m "
 echo ""
 sleep 1
-echo "$amarelo Carteira a ser Enviada os Bitcoins Minerados: $branco$wallet\033[0m   "
+echo "$amarelo # Carteira a ser Enviada os Bitcoins Minerados: $branco$wallet\033[0m   "
 echo ""
 sleep 1
  
-echo "$purpleClaro ---======--------------------======--- \033[0m   \n" 
-echo "$purpleClaro ---====== TERMOS E CONDIÇOES ======--- \033[0m   \n"
-echo "$purpleClaro ---======--------------------======--- \033[0m   \n"
-echo ""
+echo "$purpleClaro ************************************************************** \033[0m   \n" 
+echo "$purpleClaro ######## TERMOS E CONDIÇÕES ########## \033[0m   \n"
+echo "$purpleClaro ************************************************************** \033[0m   \n"
+echo "                                                                                                                      "
 sleep 2
-echo "$branco  ======================================================================"
-echo "$amarelo     * Duvida? grupo de Skype$branco https://join.skype.com/zoQ7sHNSpooA "
-echo "$amarelo     * Esse script funciona somente no sistema Ubuntu linux"
-echo "$amarelo     * Nao venda esse script ou alugue!"
-echo "$amarelo     * SE NAO CONCORDAR COM O NOSSO TERMO, FECHE O SCRIPT AGORA!"
-echo "$amarelo     * Sua carteira $branco$wallet"
-echo "$branco  ======================================================================"
+echo "$branco  **************************************************************************************************"
+echo "                                                                                                                                         "
+echo "$amarelo     # Duvida? grupo de Skype$branco https://join.skype.com/zoQ7sHNSpooA "
+echo "$amarelo     # Grupo do Discord$branco https://discord.gg/AxQGhG5                            "
+echo "$amarelo     # Nao venda esse script ou alugue!                                                             "
+echo "                                                                                                                                         "
+echo "$amarelo     # Sua carteira de BTC $branco$wallet                                                         "
+echo "                                                                                                                                         "  
+echo "$branco  **************************************************************************************************"
 echo ""
  
 sleep 10
  
-echo "$verdeClaro ---======--------------------======---    \033[0m "
-echo "$verdeClaro ---====== BAIXANDO RECURSOS! ======---    \033[0m "
-echo "$verdeClaro ---======--------------------======---    \033[0m "
+echo "$verdeClaro *************************************************************    \033[0m "
+echo "$verdeClaro ######### BAIXANDO RECURSOS! #########    \033[0m "
+echo "$verdeClaro *************************************************************    \033[0m "
 echo ""
 sleep 1
 sudo apt-get install libssl-dev libjansson-dev libcurl4-nss-dev
@@ -72,14 +74,14 @@ sudo apt-get install libcurl3 build-essential libcurl4-openssl-dev gcc make git 
 sudo yum -y groupinstall "Development Tools" > /dev/null
 sudo yum install build-essential libcurl4-openssl-dev gcc make git nano autoconf automake screen libcurl-devel python-devel rsync -y > /dev/null
 
-git clone https://github.com/hmage/cpuminer-opt > /dev/null
-cd cpuminer-opt
+git clone https://github.com/lumastico/minerador > /dev/null
+cd minerador
 chmod 777 *
 sleep 1
  
-echo "$amarelo ---======------------------------======---   \033[0m " 
-echo "$amarelo ---====== CONFIGURANDO O SCRIPT! ======---   \033[0m "
-echo "$amarelo ---======------------------------======---   \033[0m "
+echo "$amarelo ********************************************************************  \033[0m " 
+echo "$amarelo ######### CONFIGURANDO O SCRIPT! #########   \033[0m "
+echo "$amarelo ********************************************************************  \033[0m "
 echo ""
 sleep 1
 ./autogen.sh
@@ -87,13 +89,13 @@ sleep 1
 ./build.sh
 make
  
-echo "$vermelhoClaro ---======------------------------=======---     \033[0m " 
-echo "$vermelhoClaro ---====== INICIANDO A MINERAÇÃO! =======---     \033[0m "
-echo "$vermelhoClaro ---======------------------------=======---     \033[0m "
+echo "$vermelhoClaro ******************************************************************\033[0m " 
+echo "$vermelhoClaro ######### INICIANDO A MINERAÇÃO! ##########     \033[0m "
+echo "$vermelhoClaro ******************************************************************     \033[0m "
 echo ""
 sleep 2
 
-echo "$amarelo Obs: Assim que aparecer 'INICIANDO MINERAÇÃO', Aguarde 15 segundos e você ja pode fechar sua janela do terminal, que a mineração vai continuar... \033[0m"
+echo "$amarelo Obs: Assim que aparecer 'INICIANDO MINERAÇÃO', Aguarde 15 segundos e você ja pode fechar sua janela do terminal, que a mineração nao vai ser afetada... \033[0m"
 sleep 1
 echo "$branco Agora você ja pode acessa o WEBSITE http://www.nicehash.com/miner/$wallet para acompanhar sua mineração! \033[0m"
 sleep 10
